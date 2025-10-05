@@ -1,0 +1,17 @@
+[alias]
+	s = status
+
+	# branch
+	b = branch
+	brm = branch -D
+
+	# checkout 
+	co = checkout
+	com = checkout main
+	cob = checkout -b
+
+	# list branches sorted by last modified
+	lb = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+	# list aliases
+	la = "!git config -l | grep alias | cut -c 7-"
